@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login para Projeto Integrado 3</title>
+
+    <style>
+
+        *{
+            box-sizing: border-box;
+        }
+
+        body{
+            width: 80%;
+            height: 100%;
+            background-color: rgb(7, 97, 13);
+            margin: 180px; auto;
+            font: italic; color: rgb(223, 241, 88);
+        }
+
+        form{
+            width: 250px;
+            text-align: center;
+        }
+
+        input{
+            display: block;
+            margin: 8px auto;
+            width: 300px;
+            height: 40px;
+        }
+
+    </style>
+
+</head>
+<body>
+    
+    <h1>Ministério da Educação</h1>
+    <h2>Governo Federal</h2>
+    <div>
+        Veja no mapa abaixo as faculdades de Tecnologia!
+        
+        <p>
+            Coloque a sua cidade e seu estado
+        </p> 
+        
+
+        <form>
+             <input type="text" placeholder="cidade" id="cidade">
+            <input type="email" placeholder="estado" id="estado">
+            <input type="submit" onclick="logar(); return false"></form>
+     
+
+<img src="imagens/mapa.jpeg" alt="mapa">
+
+    </div>
+
+
+    <form>
+
+        <h3>Faça o Login</h3>
+        <input type="text" placeholder="Login" id="login">
+        <input type="password" placeholder="Senha" id="senha">
+        <input type="submit" onclick="logar(); return false">
+
+        <h3>ou faça o Cadastro</h3>
+        <input type="text" placeholder="Nome" id="nome">
+        <input type="email" placeholder="email" id="email">
+        <input type="submit" onclick="logar(); return false">
+
+    </form>
+
+    
+
+    <script>
+
+
+        function logar(){
+
+            var login = document.getElementById('login').value;
+            var senha = document.getElementById('senha').value;
+
+
+            if(login == "" && senha == ""){
+                alert('Os campos usuário e senha são obrigatórios');
+                
+            }else{
+                alert('Login realizado com sucesso');
+            }
+
+        }
+
+    </script>
+
+</body>
+</html>
